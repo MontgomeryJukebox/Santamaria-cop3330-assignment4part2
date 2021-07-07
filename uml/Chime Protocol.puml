@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+title Client File Upload
+Client -> Server: FT Request Header (FTRH)
+Server -> Client: FT PORT, Secret
+Client -> Server: CONNECT on PORT
+Client -> Server: Secret
+Server -> Client: FTRH confirmation
+Client -> Server: Confirmation ACK
+Client -> Server: Transmit File
+
+newpage Client File Download
+Client -> Server
+@enduml

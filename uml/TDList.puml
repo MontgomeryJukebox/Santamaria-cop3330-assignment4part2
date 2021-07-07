@@ -1,0 +1,75 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class TDManagerController {
+
+}
+
+class TDViewer {
+    + displayTODOs(TDGroup)
+    + displayTODOs(TDList)
+    + filteredDisplayTODOs(group: TDGroup, done: boolean)
+    + filteredDisplayTODOs(list: TDList, done: boolean)
+}
+
+class Exporter {
+    + exportToJSON(group: TDGroup);
+    + exportToJSON(list: TDList);
+}
+
+File Output {
+
+}
+
+File Input {
+
+}
+
+class Importer {
+    + loadFromJSON(filepath: String): TDGroup
+    + loadFromJSON(filepath: String): TDList
+}
+
+class TDManager {
+    tdGroup: TDGroup
+
+    + getGroups(): TDGroup or ArrayList<TDGroup>
+}
+
+class TDList {
+    title: String
+    list: ArrayList<Item>
+
+    + rename(newTitle: String)
+    + addItem(item: Item)
+    + rmItem(index: int)
+}
+
+class TDGroup {
+    todos: ArrayList<TDList>
+    + newList(list: TDList)
+    + rmList(index: int)
+}
+
+class Item {
+    description: String
+    done: boolean
+    dueDate: Date(YYYY-MM-DD)
+
+    + editDescription(newDesc: String)
+    + editDueDate(newDate: Date(YYYY-MM-DD))
+    + setDone(done: boolean)
+}
+
+javafx.Application <|-- TDViewer
+TDManager <-- TDManagerController
+TDManager o-- TDGroup
+TDGroup o-- TDList
+TDList o-- Item
+TDViewer <-- TDManager
+TDManager --> Exporter
+TDManager <-- Importer
+Output <-- Exporter
+Input --> Importer
+
+@enduml
