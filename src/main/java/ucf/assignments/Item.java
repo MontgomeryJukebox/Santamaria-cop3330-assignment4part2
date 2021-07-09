@@ -16,6 +16,12 @@ public class Item {
     // and a due date
     Date dueDate;
 
+    public Item(String description, boolean done, Date dueDate) {
+        this.description = description;
+        this.done = done;
+        this.dueDate = dueDate;
+    }
+
     // we should be able to grab the item's description
     public String getDescription() {
         return description;
@@ -23,16 +29,16 @@ public class Item {
 
     // and to be able to edit the description
     public void editDescription(String description) {
-        // this item's description = description;
+        this.description = description;
     }
 
     // we should be able to edit the due date
     public void editDueDate(Date newDate) {
-        // this item's due date = newDate;
+        this.dueDate = newDate;
     }
 
     // we should be able to set it to be done
     public void setDone(boolean done) {
-        // item.done = done;
+        this.done = done;
     }
 }

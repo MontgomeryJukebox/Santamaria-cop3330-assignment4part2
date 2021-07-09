@@ -37,7 +37,7 @@ public class TDViewer extends Application {
 
 
     // we shouldl be able to diplay the TDGroup within TDManager
-    void displayTODOs(TDGroup group) {
+    void displayTODOs(TDList list) {
         // to display a TDGroup, we should
         // first grab
         // size = group.numberOfTDLists()
@@ -53,19 +53,6 @@ public class TDViewer extends Application {
         //   make new itemDisplay(item)
         //   push_back(itemDisplay) to the second scrollpane for viewing
         //   items
-    }
-
-    // and have a little helper function
-    void displayTODOs(TDList list) {
-        // do the same as in the above with TDGroup except for a single list
-        // ideally, the above would call this for each group in tdGroup
-    }
-
-    // we should also be able to filter the search, by items that are done or not
-    void filteredDisplayTODOs(TDGroup group, boolean showDone) {
-        // more customizable display, option to do the above but
-        // only display items who's 'done' state is set to true
-        // if showDone is false
     }
 
     // and also have a little helper function for the above

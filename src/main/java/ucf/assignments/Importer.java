@@ -5,15 +5,33 @@
 
 package ucf.assignments;
 
+import com.google.gson.Gson;
+
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 /* Our importer for handling TODO list imports from files */
 public class Importer {
+    private Gson gson;
+    private Reader reader;
+    private String rootDir = "";
 
-    // should have some handy dandy import TDGroup from json file method
-    TDGroup importFromJSON(String filepath) {
-        return null;
+    public Importer(String saveDirectory) {
+        gson = new Gson();
+        rootDir = saveDirectory;
     }
-    // and also some import list from json method
+
     TDList importListFromJSON(String filepath) {
-        return null;
+        TDList ret;
+        try {
+            reader = Files.newBufferedReader(Paths.get(rootDir + filepath));
+            ret = gson.fromJson(reader, TDList.class);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+            return null;
+        }
+        return ret;
     }
 }

@@ -14,16 +14,26 @@ public class TDList {
     // and contain a vector of items
     ArrayList<Item> list;
 
+    public TDList() {
+        list = new ArrayList<Item>();
+    }
+
+    public TDList(String title) {
+        this();
+        this.title = title;
+    }
+
     // we should be able to grab the title
     public String getTitle() {
-        return "TODO LIST";
+        return title;
     }
     // and rename the list
     public void rename(String title) {
-        // set this title to the parameter passed through
+        this.title = title;
     }
     // and add items to the list, appropriately
     public void addItem(Item item) {
-        // add this item to the list of items
+        assert(item != null);
+        list.add(item);
     }
 }

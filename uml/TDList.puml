@@ -6,14 +6,12 @@ class TDManagerController {
 }
 
 class TDViewer {
-    + displayTODOs(TDGroup)
     + displayTODOs(TDList)
     + filteredDisplayTODOs(group: TDGroup, done: boolean)
     + filteredDisplayTODOs(list: TDList, done: boolean)
 }
 
 class Exporter {
-    + exportToJSON(group: TDGroup);
     + exportToJSON(list: TDList);
 }
 
@@ -26,7 +24,6 @@ File Input {
 }
 
 class Importer {
-    + loadFromJSON(filepath: String): TDGroup
     + loadFromJSON(filepath: String): TDList
 }
 
@@ -45,12 +42,6 @@ class TDList {
     + rmItem(index: int)
 }
 
-class TDGroup {
-    todos: ArrayList<TDList>
-    + newList(list: TDList)
-    + rmList(index: int)
-}
-
 class Item {
     description: String
     done: boolean
@@ -63,9 +54,8 @@ class Item {
 
 javafx.Application <|-- TDViewer
 TDManager <-- TDManagerController
-TDManager o-- TDGroup
-TDGroup o-- TDList
 TDList o-- Item
+TDManager <-- TDList
 TDViewer <-- TDManager
 TDManager --> Exporter
 TDManager <-- Importer
