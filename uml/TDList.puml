@@ -23,6 +23,10 @@ File Input {
 
 }
 
+class ItemFinder {
+    getButtonsItem(Button): Item
+}
+
 class Importer {
     + loadFromJSON(filepath: String): TDList
 }
@@ -37,16 +41,19 @@ class TDList {
     title: String
     list: ArrayList<Item>
 
-    + rename(newTitle: String)
-    + addItem(item: Item)
-    + rmItem(index: int)
+    + rename(newTitle: String): void
+    + addItem(item: Item): void
+    + rmItem(index: int): void
+    + clearItems(): void
 }
 
 class Item {
     description: String
     done: boolean
-    dueDate: Date(YYYY-MM-DD)
+    dueDate: Date[YYYY-MM-DD]
 
+    + checkDate(): boolean
+    + checkDescription(): boolean
     + editDescription(newDesc: String)
     + editDueDate(newDate: Date(YYYY-MM-DD))
     + setDone(done: boolean)
@@ -61,5 +68,7 @@ TDManager --> Exporter
 TDManager <-- Importer
 Output <-- Exporter
 Input --> Importer
+TDViewer ---> ItemFinder
+ItemFinder ---> Item
 
 @enduml

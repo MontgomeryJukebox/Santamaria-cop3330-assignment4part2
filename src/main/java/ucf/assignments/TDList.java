@@ -36,4 +36,8 @@ public class TDList {
         assert(item != null);
         list.add(item);
     }
+
+    public void clearItems() {
+        list.clear();
+    }
 }

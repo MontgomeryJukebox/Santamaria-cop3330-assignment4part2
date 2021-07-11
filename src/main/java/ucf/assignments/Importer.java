@@ -6,6 +6,7 @@
 package ucf.assignments;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -19,19 +20,16 @@ public class Importer {
     private String rootDir = "";
 
     public Importer(String saveDirectory) {
-        gson = new Gson();
+        gson = new GsonBuilder().setPrettyPrinting().create();
         rootDir = saveDirectory;
     }
 
-    TDList importListFromJSON(String filepath) {
+    TDList importListFromJSON(String filepath) throws IOException {
         TDList ret;
-        try {
-            reader = Files.newBufferedReader(Paths.get(rootDir + filepath));
-            ret = gson.fromJson(reader, TDList.class);
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-            return null;
-        }
+        String fullPath = rootDir + "/" + filepath;
+        reader = Files.newBufferedReader(Paths.get(fullPath));
+        assert(reader != null);
+        ret = gson.fromJson(reader, TDList.class);
         return ret;
     }
 }
