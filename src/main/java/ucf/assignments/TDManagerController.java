@@ -101,14 +101,6 @@ public class TDManagerController {
         vbox.getChildren().add(display);
     }
 
-    // when we select a new tdlist to view
-    public void selectTDList(ActionEvent actionEvent) {
-        // we will have to update the viewer so that it is displaying the list that was just selected
-        // it will go something like...
-        // grab the list that was clicked by the button (again, using the relationship between buttons and lists)
-        // and then displayTODOs(list)
-    }
-
     // when the user imports the todo list from a json file
     public void doImportFromJSON(ActionEvent actionEvent) {
         System.out.println("Importing!");
@@ -130,16 +122,6 @@ public class TDManagerController {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error while exporting  json file: " + e.getMessage());
         }
-    }
-
-    public static EventHandler<ActionEvent> getCheckboxClickedSetDone() {
-        return e -> {
-            // TODO
-        };
-    }
-
-    public void getCheckboxClickedSetDone(ActionEvent actionEvent) {
-        // TODO
     }
 
     public void renameManagerList(ActionEvent actionEvent) {
