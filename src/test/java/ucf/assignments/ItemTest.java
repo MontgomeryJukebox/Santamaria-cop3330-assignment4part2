@@ -27,9 +27,9 @@ class ItemTest {
     @Test
     void editDueDate() {
         Item eggs = new Item("get some eggs", false, Calendar.getInstance());
-        eggs.editDueDate(GregorianCalendar.from(null));
-        System.out.println(eggs.dueDate);
-        assert(eggs.dueDate.toString().equals("Wed Sep 28 00:00:00 EDT 3921"));
+        Calendar c = Calendar.getInstance();
+        eggs.editDueDate(c);
+        assert(eggs.dueDate.equals(c));
     }
 
     @Test

@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d00cdbf3-a3bc-4844-8025-5a6b18fdbc46" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TestIO/Groceries" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestIO/TODO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestIO/Test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestIO/null" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/Exporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/Exporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ucf/assignments/ItemDisplay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ucf/assignments/ItemDisplay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ucf/assignments/TDManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ucf/assignments/TDManager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/ImporterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/ImporterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/ItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDManagerControllerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +131,28 @@
       <recent name="ucf.assignments" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Santamaria-cop3330-assignment4part2 [run]">
+  <component name="RunManager" selected="Gradle.TDManagerTest">
+    <configuration name="ImporterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ucf.assignments.ImporterTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ItemTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -178,27 +191,6 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Santamaria-cop3330-assignment4part2 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -247,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Santamaria-cop3330-assignment4part2 [run]" />
         <item itemvalue="Gradle.TDManagerTest" />
         <item itemvalue="Gradle.TDListTest" />
-        <item itemvalue="Gradle.ItemTest" />
         <item itemvalue="Gradle.ItemTest.editDueDate" />
+        <item itemvalue="Gradle.ItemTest" />
+        <item itemvalue="Gradle.ImporterTest" />
       </list>
     </recent_temporary>
   </component>
