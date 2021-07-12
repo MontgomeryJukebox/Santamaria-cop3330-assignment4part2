@@ -24,9 +24,7 @@ import java.awt.event.ActionListener;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.HashMap;
+import java.util.*;
 
 /* Our TDManagerController will be the controller for the project */
 public class TDManagerController {
@@ -63,6 +61,11 @@ public class TDManagerController {
 
     public void displayTODOs(TDList list) {
         vbox.getChildren().clear();
+        Collections.sort(list.list, new Comparator<Item>(){
+            public int compare(Item p1, Item p2) {
+                return p1.getDescription().compareTo(p2.getDescription());
+            }
+        });
         for (Item i : list.list) {
             ItemDisplay display = new ItemDisplay(i, manager, this);
             vbox.getChildren().add(display);
