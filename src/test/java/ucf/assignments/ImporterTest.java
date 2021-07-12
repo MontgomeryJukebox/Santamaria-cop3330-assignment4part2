@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Calendar;
 import java.util.Date;
 
 class ImporterTest {
@@ -17,7 +18,7 @@ class ImporterTest {
         Exporter exporter = new Exporter("TestIO");
 
         TDList list = new TDList("Groceries");
-        Item ham = new Item("Ham", true, new Date(2021, 8, 28));
+        Item ham = new Item("Ham", true, Calendar.getInstance());
         list.addItem(ham);
 
         try {

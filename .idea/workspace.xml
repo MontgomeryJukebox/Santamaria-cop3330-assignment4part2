@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d00cdbf3-a3bc-4844-8025-5a6b18fdbc46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TestIO/TODO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestIO/Test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestIO/null" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemDisplay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ucf/assignments/ItemDisplay.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestIO/TODO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestIO/Test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestIO/null" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/Exporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/Exporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/Importer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/Importer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/ItemEvent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ucf/assignments/TDViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ucf/assignments/ItemDisplay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ucf/assignments/ItemDisplay.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ucf/assignments/TDManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ucf/assignments/TDManager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/ExporterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/ExporterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/ItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDGroupTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/TDManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/TDList.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/TDList.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ucf/assignments/ImporterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ucf/assignments/ImporterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +99,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1v0L6j6SuOeTfIZ6DMx2hz394pS" />
   <component name="ProjectLevelVcsManager">

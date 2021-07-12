@@ -15,9 +15,13 @@ import java.nio.file.Paths;
 
 /* Our exporter class */
 public class Exporter {
+    // will need an internal gson
     private Gson gson;
+    // some writer for exporting
     private Writer writer;
+    // and a root directory
     private String rootDir = "";
+
 
     public Exporter(String saveDir) {
         gson = new GsonBuilder().setPrettyPrinting().create();
@@ -26,12 +30,15 @@ public class Exporter {
 
     // and some export list to json method
     void exportToJSON(TDList list) throws Exception {
+        // we'll make sure we have the full path
         String fullPath = rootDir + "/" + list.getTitle();
-        System.out.printf("EXPORTER\n");
-        System.out.printf("rootDir is %s, list title is %s. Fullpath is %s\n", rootDir, list.getTitle(), fullPath);
+
         try {
+            // we'll make a new writer,
             writer = Files.newBufferedWriter(Paths.get(fullPath));
+            // export to json
             gson.toJson(list, writer);
+            // and make sure we flush before we're done with everything
             writer.flush();
             writer.close();
         } catch (IOException ioe) {

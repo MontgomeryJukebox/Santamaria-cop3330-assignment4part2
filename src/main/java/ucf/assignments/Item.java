@@ -25,8 +25,10 @@ public class Item {
         checkGregorian(dueDate);
     }
 
-    public void checkGregorian(Calendar calendar) {
-        assert ("gregory".equals(calendar.getCalendarType()));
+    // our checkDate() method
+    public boolean checkGregorian(Calendar calendar) {
+        // will just make sure the date is a gregorian date
+        return "gregory".equals(calendar.getCalendarType());
     }
 
     // we should be able to grab the item's description
@@ -45,13 +47,8 @@ public class Item {
         return size >= 1 && size <= 256;
     }
 
-    public boolean checkDate() {
-        // check that the date is a valid date on the gregorian calendar
-        return false;
-    }
-
     // we should be able to edit the due date
-    public void editDueDate(GregorianCalendar newDate) {
+    public void editDueDate(Calendar newDate) {
         this.dueDate = newDate;
     }
 

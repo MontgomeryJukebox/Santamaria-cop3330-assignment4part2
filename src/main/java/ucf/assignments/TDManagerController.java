@@ -50,6 +50,9 @@ public class TDManagerController {
     public TextField curTDListTitle;
 
     @FXML
+    public Button clearItems;
+
+    @FXML
     public ComboBox filter = new ComboBox(FXCollections.observableArrayList("All Options", "Only Complete", "Only Incomplete"));
 
     public TDManagerController() {
@@ -61,7 +64,7 @@ public class TDManagerController {
     public void displayTODOs(TDList list) {
         vbox.getChildren().clear();
         for (Item i : list.list) {
-            ItemDisplay display = new ItemDisplay(i);
+            ItemDisplay display = new ItemDisplay(i, manager, this);
             vbox.getChildren().add(display);
         }
     }
@@ -69,7 +72,7 @@ public class TDManagerController {
     // when the "filter only by done items" button is clicked
     public void filterItems(ActionEvent actionEvent) {
         String choice = (String) filter.getValue();
-        if (choice.equals("All items")) {
+        if (choice.equals("All Items")) {
             displayTODOs(manager.list);
         } else if (choice.equals("Only Complete")) {
             TDList tmp = new TDList(manager.list.getTitle());
@@ -94,7 +97,7 @@ public class TDManagerController {
     public void createNewItem(ActionEvent actionEvent) {
         Item item = new Item("Test", true, Calendar.getInstance());
         manager.list.addItem(item);
-        ItemDisplay display = new ItemDisplay(item);
+        ItemDisplay display = new ItemDisplay(item, manager, this);
         vbox.getChildren().add(display);
     }
 
@@ -106,24 +109,6 @@ public class TDManagerController {
         // and then displayTODOs(list)
     }
 
-    // and when we remove an item from our currently selected list (a tad bit more work than the above methods)
-    public void deleteItem(ActionEvent actionEvent) {
-        // find the list that the item belongs in
-        // removeItem() from its parenting list
-    }
-
-    // when the user wants to change the description for an item
-    public void doChangeItemDescription(ActionEvent actionEvent) {
-        // find the item that the user is clicking
-        // do setDescription()
-    }
-
-    // when the user changes the due date
-    public void doChangeItemDueDate(ActionEvent actionEvent) {
-        // grab the item
-        // setDueDate(item);
-    }
-
     // when the user imports the todo list from a json file
     public void doImportFromJSON(ActionEvent actionEvent) {
         System.out.println("Importing!");
@@ -133,6 +118,8 @@ public class TDManagerController {
         } catch (IOException ioe) {
             JOptionPane.showMessageDialog(null, "Error while importing json file: " + ioe.getMessage());
         }
+        curTDListTitle.setText(manager.list.getTitle());
+        displayTODOs(manager.list);
     }
 
     // when the user exports to JSON
@@ -157,5 +144,14 @@ public class TDManagerController {
 
     public void renameManagerList(ActionEvent actionEvent) {
         manager.list.rename(curTDListTitle.getText());
+    }
+
+    public void deleteItem(ActionEvent actionEvent) {
+        System.out.println("Test!");
+    }
+
+    public void clearItems(ActionEvent actionEvent) {
+        manager.clearItems();
+        displayTODOs(manager.list);
     }
 }
